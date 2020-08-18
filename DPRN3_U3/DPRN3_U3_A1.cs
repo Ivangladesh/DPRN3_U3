@@ -16,5 +16,14 @@ namespace DPRN3_U3
         {
             InitializeComponent();
         }
+        //EVENTO CLICK DEL BOTÓN "MOSTRAR"
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //SE INSTANCIA LA CLASE DATABASE
+            DataBase db = new DataBase();
+            //SE ASIGNA EL ORIGEN DE DATOS DEL DATAGRID COMO EL RESULTADO
+            //DEL MÉTODO Get_Lista
+            dataGridView1.DataSource = db.Get_Lista();
+        }
     }
 }
